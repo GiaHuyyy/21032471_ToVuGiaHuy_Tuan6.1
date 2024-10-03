@@ -51,15 +51,12 @@ const Screens_01 = () => {
           <Image source={images.search} />
           <TextInput placeholder="Dây cáp usb" style={{ width: "100%", height: "100%", paddingLeft: 4 }} />
         </View>
-        <View style={{ position: "relative" }}>
+        <TouchableOpacity onPress={() => navigation.navigate("Screen_02")} style={{ position: "relative" }}>
           <Image source={images.cart} />
-          <TouchableOpacity
-            style={{ position: "absolute", right: -7, top: -4 }}
-            onPress={() => navigation.navigate("Screen_02")}
-          >
+          <View style={{ position: "absolute", right: -7, top: -4 }}>
             <Image source={images.circle} />
-          </TouchableOpacity>
-        </View>
+          </View>
+        </TouchableOpacity>
         <Image source={images.more} />
       </View>
 
